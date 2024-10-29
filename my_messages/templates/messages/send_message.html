@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Message</title>
+</head>
+<body>
+    <h2>Send Message</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+    </form>
+    <a href="{% url 'message_history' %}">Message History</a>
+    <a href="{% url 'change_name' %}">Change Name</a>
+</body>
+</html>
